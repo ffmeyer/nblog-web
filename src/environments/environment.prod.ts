@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:4567/api/prod'
+  apiUrl: 'https://nblog-api-production.herokuapp.com/api'
 };
