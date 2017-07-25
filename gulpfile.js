@@ -25,3 +25,28 @@ gulp.task('build', function (cb) {
     cb(code);
   });
 });
+
+
+gulp.task('go', function (cb) {
+
+  var cmd = null;
+
+  if (process.env.NODE_ENV == "production") {
+    cmd = spawn('ng', ['serve', '--env=prod'], {
+      stdio: 'inherit'
+    });
+  } else if (process.env.NODE_ENV == "qa") {
+    cmd = spawn('ng', ['serve', '--env=qa'], {
+      stdio: 'inherit'
+    });
+  } else {
+    cmd = spawn('ng', ['serve', '--env=dev'], {
+      stdio: 'inherit'
+    });
+  }
+
+  cmd.on('close', function (code) {
+    console.log('ng build exited with code: ' + code);
+    cb(code);
+  });
+});
