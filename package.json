@@ -4,11 +4,12 @@
   "description": "WebApp para treinamentos do QA Ninja",
   "scripts": {
     "ng": "ng",
-    "start": "gulp build",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "gulp build"
   },
   "repository": {
     "type": "git",
