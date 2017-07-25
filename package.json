@@ -4,7 +4,7 @@
   "description": "WebApp para treinamentos do QA Ninja",
   "scripts": {
     "ng": "ng",
-    "start": "./node_modules/.bin/gulp build && ./node_modules/.bin/gulp go",
+    "start": "gulp build",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -22,6 +22,7 @@
     "jenkins"
   ],
   "license": "MIT",
+  "mail": "app.js",
   "author": "Fernando Papito",
   "private": true,
   "dependencies": {
