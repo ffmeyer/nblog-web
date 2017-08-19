@@ -13,5 +13,5 @@ Funcionalidade: Cadastrar artigos
 
         Dado que eu tenho um novo artigo
         Quando faço o cadastro desse artigo
-        Então vejo o toaster com a mensagem "Artigo cadastrado com sucesso."
+        Então vejo o toaster com a mensagem "Artigo cadastrado com sucesso!"
 
