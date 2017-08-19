@@ -1,0 +1,7 @@
+
+
+results/junit
+results/junit/*.xml
+results/*.json
+results/*.html
+results/shots/*.png
