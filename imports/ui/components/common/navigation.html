@@ -1,0 +1,25 @@
+<template name="navigation">
+
+    <aside class="navigation">
+        <nav>
+            <ul class="nav luna-nav">
+                <li class="nav-category">
+                    Admin
+                </li>
+                <li class="{{isActivePath '/admin/posts'}}">
+                    <a href="/admin/posts">Artigos</a>
+                </li>
+                <!-- <li class="{{isActivePath '/NotFound'}}">
+                    <a href="/NotFound">NotFount</a>
+                </li> -->
+
+                <li class="nav-info">
+                    <div class="m-t-xs">
+                        <span class="c-white">Ninja Blog</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+</template>

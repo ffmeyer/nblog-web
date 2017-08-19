@@ -1,0 +1,49 @@
+<template name="Adm_postList">
+
+
+    <div class="container-fluid">
+
+        {{> pageHeader category='Publico' section='Basic' title='Administração de Artigos' icon="pe-7s-box1" desc='Todos os artigos' }}
+        <div class="panel-body">
+            <a class="btn btn-default" href="/admin/posts/add">Cadastrar novo Artigo</a>
+        </div>
+
+        <div class="row m-t-md">
+            <div class="col-md-12">
+                <div class="panel">
+                    {{#if searching}} {{> loading}} {{else}} {{#each postsApi}}
+                    <div id="{{id}}" class="col-md-4">
+
+                        <div class="panel panel-filled">
+                            <div class="post">
+                                <div class="panel-heading">
+                                    <h5>{{title}}</h5>
+                                </div>
+                                <div class="panel-heading">
+                                    <img src="{{image}}" alt="" width="100%">
+                                </div>
+                                <div class="panel-body">
+
+                                    <div class="two-line-ellipsis">
+                                        <p>{{body}}</p>
+                                    </div>
+                                    <!-- <button id="update" class="btn btn-primary btn-sm"><span class="pe-7s-paper-plane"></span></button> -->
+                                    <button id="delete" class="btn btn-danger btn-sm"><span class="pe-7s-trash"></span></button>
+                                </div>
+                                <div class="panel-footer">{{created_date}}</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {{else}}
+                    <p colspan="5" class="alert alert-warning">Nothing found for {{query}}. Sorry, bub.</p>
+                    {{/each}} {{/if}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</template>

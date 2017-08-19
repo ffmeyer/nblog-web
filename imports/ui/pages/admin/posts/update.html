@@ -1,0 +1,37 @@
+<template name="Adm_postUpdate">
+
+
+    <div class="container-fluid">
+        {{> pageHeader category='Configurações' section='Cursos' title='Atualizar' icon="pe-7s-box1" desc='Atualizar curso'}}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <form id="form-update" name="formUpdate" data-toggle="validator">
+
+                            <div class="form-group m-t-sm">
+                                <select name="coaches[]" class="select-coach form-control" multiple="multiple" style="width: 100%">
+                                    {{#each coachList}}
+                                        <option value="{{this.name}}" {{isSelectedList post.coaches this.name}}>{{this.name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="checkbox checkbox-primary m-t-sm">
+                                <input id="status" name="status" class="form-control styled" type="checkbox" checked="{{post.status}}">
+                                <label for="status">Status</label>
+                            </div>
+                            <div class="form-group">
+                                <a class="btn btn-default" href="/admin/posts">Voltar</a>
+                                <input id="updatePost" type="submit" name="submit" class="btn btn-accent" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</template>
