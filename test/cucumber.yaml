@@ -1,4 +1,4 @@
----
+
 default: -p qa
 qa: ENVIRONMENT=qa --format progress -p json -p junit -p html
 uat: ENVIRONMENT=uat --format progress
