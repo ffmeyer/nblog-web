@@ -1,8 +1,0 @@
----
-default: -p qa
-qa: ENVIRONMENT=qa --format progress -p json -p junit -p html
-uat: ENVIRONMENT=uat --format progress
-production: ENVIRONMENT=production --format progress
-json: --format json --out=results/features.json
-html: --format html --out=results/features.html
-junit: --format junit --out results/junit
